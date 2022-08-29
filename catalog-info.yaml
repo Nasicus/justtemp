@@ -5,12 +5,15 @@ kind: System
 metadata:
   name: Personalization.Vesta
   description: |
-    - Manages test (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations
+    - Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations
     - Coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin
     - Handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not)
   labels:
     dg.darwin.semantic-name: Shared.UserIdentityData
     dg.darwin.context: shared
+  tags:
+   - csharp
+   - gcp
 spec:
   owner: darwin
 ---
