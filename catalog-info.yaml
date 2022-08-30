@@ -7,7 +7,7 @@ metadata:
   title: Personalization.Vesta
   namespace: darwin-shared
   description: |
-    Test2: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
+    Test3: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
     Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
     And it also handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not).
   labels:
@@ -26,6 +26,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.Api
+  namespace: darwin-shared
   description: REST API to get Customer information and Coupon Subscriptions.
   annotations:
     dev.azure.com/project-repo: devinite/Personalization.Vesta
@@ -48,6 +49,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.DSGVO
+  namespace: darwin-shared
   description: Uses Google PUB/SUB for listening to messages to permanently delete customer information from BigQuery.
   annotations:
     dev.azure.com/project-repo: devinite/Personalization.Vesta
@@ -69,6 +71,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.Hephaestus
+  namespace: darwin-shared
   description: |
     Uses Google PUB/SUB for three main things.
     It subscribes / unsubscribes customers to coupons.
