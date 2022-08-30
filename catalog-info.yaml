@@ -3,7 +3,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: Personalization.Vesta
+  name: Darwin.Shared.UserIdentityData
+  title: Personalization.Vesta
+  namespace: darwin.shared
   description: |
     Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
     Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
