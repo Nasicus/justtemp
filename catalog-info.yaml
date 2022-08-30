@@ -3,11 +3,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: Darwin.Shared.UserIdentityData
+  name: Shared.UserIdentityData
   title: Personalization.Vesta
   namespace: darwin-shared
   description: |
-    Test3: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
+    Test4: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
     Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
     And it also handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not).
   labels:
@@ -42,7 +42,7 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Darwin.Shared.UserIdentityData
+  system: Shared.UserIdentityData
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
@@ -64,7 +64,7 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Darwin.Shared.UserIdentityData
+  system: Shared.UserIdentityData
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
@@ -90,6 +90,6 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Darwin.Shared.UserIdentityData
+  system: Shared.UserIdentityData
 ---
 
