@@ -5,9 +5,9 @@ kind: System
 metadata:
   name: Personalization.Vesta
   description: |
-    - TEST1: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations <br />
-    - Coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin  
-    - Handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not)
+    Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
+    Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
+    And it also handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not).
   labels:
     dg.darwin.semantic-name: Shared.UserIdentityData
     dg.darwin.context: shared
@@ -24,7 +24,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.Api
-  description: REST API to get Customer information and Coupon Subscriptions
+  description: REST API to get Customer information and Coupon Subscriptions.
   annotations:
     dev.azure.com/project-repo: devinite/Personalization.Vesta
     backstage.io/kubernetes-id: vesta
@@ -46,7 +46,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.DSGVO
-  description: Uses Google PUB/SUB for listening to messages to permanently delete customer information from BigQuery
+  description: Uses Google PUB/SUB for listening to messages to permanently delete customer information from BigQuery.
   annotations:
     dev.azure.com/project-repo: devinite/Personalization.Vesta
     backstage.io/kubernetes-id: vesta-dsgvo
@@ -68,10 +68,10 @@ kind: Component
 metadata:
   name: Vesta.Hephaestus
   description: |
-    - Uses Google PUB/SUB to:
-    - ... subscribe / unsubscribe customers to coupons
-    - ... coordinate GDPR / DSGVO deletion request of customers to all other services (including itself) and accept & record confirmations of deletions from the other services
-    - ... upsert and (soft) delete customer data
+    Uses Google PUB/SUB for three main things.
+    It subscribes / unsubscribes customers to coupons.
+    It also coordinates GDPR / DSGVO deletion requests of customers to all other services (including itself) and accepts & records confirmations of deletions from the other services.
+    And thirdly it also upserts and (soft) deletes customer data.
   annotations:
     dev.azure.com/project-repo: devinite/Personalization.Vesta
     backstage.io/kubernetes-id: vesta-hephaestus
