@@ -41,7 +41,7 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Personalization.Vesta
+  system: Darwin.Shared.UserIdentityData
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
@@ -62,7 +62,7 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Personalization.Vesta
+  system: Darwin.Shared.UserIdentityData
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
@@ -87,6 +87,6 @@ spec:
   type: service
   lifecycle: production
   owner: darwin
-  system: Personalization.Vesta
+  system: Darwin.Shared.UserIdentityData
 ---
 
