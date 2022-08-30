@@ -7,7 +7,7 @@ metadata:
   title: Personalization.Vesta
   namespace: darwin-shared
   description: |
-    Test5: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
+    Test6: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
     Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
     And it also handles Coupon Subscriptions for customers (i.e. if a customer wants to receive coupons (Persönliche Kundenvorteile) via email or not).
   labels:
@@ -22,7 +22,8 @@ spec:
   owner: darwin
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
-apiVersion: backstage.io/v1alpha1
+
+Version: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vesta.Api
@@ -40,19 +41,6 @@ metadata:
       url: https://console.cloud.google.com/logs/query;query=labels.k8s-pod%2Fapp%3D%22vesta%22?project=dg-pers-prod
 spec:
   type: service
-  lifecycle: production
-  owner: darwin
-  system: Shared.UserIdentityData
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: Vesta.Api
-  namespace: darwin-shared
-  description: Openapi
-spec:
-  type: openapi
   lifecycle: production
   owner: darwin
   system: Shared.UserIdentityData
