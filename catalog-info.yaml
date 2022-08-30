@@ -5,7 +5,7 @@ kind: System
 metadata:
   name: Darwin.Shared.UserIdentityData
   title: Personalization.Vesta
-  namespace: darwin.shared
+  namespace: darwin-shared
   description: |
     Test1: Manages (update / delete) customer information (Name, Gender, Language etc.) which is used for personalization / recommandations.
     Also the service coordinates the requested GDPR / DSGVO delete of users to all other services from team Darwin.
